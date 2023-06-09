@@ -85,7 +85,7 @@ const RSVPPage = () => {
 				name="rsvp-form"
 				method="POST"
 				data-netlify="true"
-				onSubmit={handleSubmit}
+				
 			>
 				{people.map((person, index) => (
 				<div className="form-section" key={index}>
