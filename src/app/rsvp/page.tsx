@@ -87,6 +87,7 @@ const RSVPPage = () => {
 							Last Name:
 							<input
 								type="text"
+								name={`lastName${index}`}
 								value={person.lastName}
 								required
 								onChange={(e) =>
@@ -101,6 +102,7 @@ const RSVPPage = () => {
 							<input
 								type="checkbox"
 								checked={person.attending}
+								name={`attending${index}`}
 								onChange={(e) =>
 								handleFieldChange(index, 'attending', e.target.checked)
 								}
@@ -114,6 +116,7 @@ const RSVPPage = () => {
 								<select
 									value={person.duration}
 									required
+									name={`duration${index}`}
 									onChange={(e) =>
 										handleFieldChange(index, 'duration', e.target.value)
 									}
@@ -132,6 +135,7 @@ const RSVPPage = () => {
 								<select
 									value={person.starter}
 									required
+									name={`starter${index}`}
 									onChange={(e) =>
 										handleFieldChange(index, 'starter', e.target.value)
 									}
@@ -149,6 +153,7 @@ const RSVPPage = () => {
 								<select
 									value={person.mainCourse}
 									required
+									name={`mainCourse${index}`}
 									onChange={(e) =>
 										handleFieldChange(index, 'mainCourse', e.target.value)
 									}
@@ -166,6 +171,7 @@ const RSVPPage = () => {
 								<select
 									value={person.dessert}
 									required
+									name={`dessert${index}`}
 									onChange={(e) =>
 										handleFieldChange(index, 'dessert', e.target.value)
 									}
@@ -178,9 +184,9 @@ const RSVPPage = () => {
 					)}
 					{index > 0 && (
 						<div className="form-row">
-						<button type="button" onClick={() => removePerson(index)}>
-							Remove Person
-						</button>
+							<button type="button" onClick={() => removePerson(index)}>
+								Remove Person
+							</button>
 						</div>
 					)}
 				</div>
@@ -191,9 +197,7 @@ const RSVPPage = () => {
 						Add Another Person
 					</button>
 				</div>
-				<div className="form-row">
-					<button type="submit">Submit</button>
-				</div>
+				<button type="submit">Submit</button>
 			</form>
 		</main>
 	);
