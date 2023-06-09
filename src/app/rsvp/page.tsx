@@ -57,6 +57,25 @@ const RSVPPage = () => {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 		e.preventDefault();
+	  
+		// Prepare the form data
+		const formData = new FormData(e.currentTarget);
+		const encodedFormData = new URLSearchParams(formData as any).toString();
+	  
+		// Submit the form to Netlify
+		fetch('/', {
+		  method: 'POST',
+		  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
+		  body: encodedFormData,
+		})
+		  .then(() => {
+			alert('Success!');
+			// Redirect or perform any other actions on success
+		  })
+		  .catch((error) => {
+			alert(`Error: ${error}`);
+			// Handle the error case
+		  });
 	};
 
 	return (
@@ -66,6 +85,7 @@ const RSVPPage = () => {
 				name="rsvp-form"
 				method="POST"
 				data-netlify="true"
+				onSubmit={handleSubmit}
 			>
 				{people.map((person, index) => (
 				<div className="form-section" key={index}>
