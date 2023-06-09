@@ -81,7 +81,7 @@ const RSVPPage = () => {
 	return (
 		<main>
 			<h1>RSVP</h1>
-			<form
+			<form onSubmit={handleSubmit}
 				name="rsvp-form"
 				method="POST"
 				data-netlify="true"
