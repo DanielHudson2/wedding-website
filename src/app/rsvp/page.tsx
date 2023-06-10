@@ -1,5 +1,6 @@
 'use client';
 import React, { useState } from 'react';
+import emailjs from '@emailjs/browser';
 
 interface Person {
 	firstName: string;
@@ -56,26 +57,24 @@ const RSVPPage = () => {
 	};
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
+
 		e.preventDefault();
-	  
-		// Prepare the form data
-		const formData = new FormData(e.currentTarget);
-		const encodedFormData = new URLSearchParams(formData as any).toString();
-	  
-		// Submit the form to Netlify
-		fetch('/', {
-		  method: 'POST',
-		  headers: { 'Content-Type': 'application/x-www-form-urlencoded' },
-		  body: encodedFormData,
-		})
-		  .then(() => {
-			alert('Success!');
-			// Redirect or perform any other actions on success
-		  })
-		  .catch((error) => {
-			alert(`Error: ${error}`);
-			// Handle the error case
-		  });
+
+		// Collect the form data
+		const form = e.currentTarget;
+		const formData = new FormData(form);
+		const serializedData = Object.fromEntries(formData.entries());
+
+		// Send the email using EmailJS
+		emailjs.send('service_jdnvtid', '80t5tcy', serializedData, 'lFLTq3pU-IM9x461r')
+			.then((response) => {
+				console.log('Email sent successfully!', response);
+				window.location.href = '/success'; // Redirect to a success page
+			})
+			.catch((error) => {
+				console.error('Email sending failed:', error);
+				// Handle error case
+			});
 	};
 
 	return (
@@ -218,6 +217,7 @@ const RSVPPage = () => {
 						Add Another Person
 					</button>
 				</div>
+				<input type="hidden" name="formData" value={JSON.stringify(people)} />
 				<button type="submit">Submit</button>
 			</form>
 		</main>
