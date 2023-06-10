@@ -58,15 +58,31 @@ const RSVPPage = () => {
 
 	const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
 
+		// Collect the form data
 		e.preventDefault();
 
-		// Collect the form data
-		const form = e.currentTarget;
-		const formData = new FormData(form);
-		const serializedData = Object.fromEntries(formData.entries());
+		// Format the form data for submission
+		const formattedData = people.map((person) => {
+			return `First Name: ${person.firstName}
+			Last Name: ${person.lastName}
+			Attending: ${person.attending ? 'Yes' : 'No'}
+			Duration: ${person.duration}
+			Starter: ${person.starter}
+			Main Course: ${person.mainCourse}
+			Dessert: ${person.dessert}
+		`;
+		});
+
+  		const emailContent = formattedData.join('\n\n');
 
 		// Send the email using EmailJS
-		emailjs.send('service_jdnvtid', 'template_29m8iud', serializedData, 'lFLTq3pU-IM9x461r')
+		emailjs.send(
+			'service_jdnvtid', 
+			'template_29m8iud', 
+			{
+				message: emailContent,
+			},
+			'lFLTq3pU-IM9x461r')
 			.then((response) => {
 				console.log('Email sent successfully!', response);
 				window.location.href = '/success'; // Redirect to a success page
@@ -74,7 +90,8 @@ const RSVPPage = () => {
 			.catch((error) => {
 				console.error('Email sending failed:', error);
 				// Handle error case
-			});
+			}
+		);
 	};
 
 	return (
