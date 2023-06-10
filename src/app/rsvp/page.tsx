@@ -66,7 +66,7 @@ const RSVPPage = () => {
 		const serializedData = Object.fromEntries(formData.entries());
 
 		// Send the email using EmailJS
-		emailjs.send('service_jdnvtid', '80t5tcy', serializedData, 'lFLTq3pU-IM9x461r')
+		emailjs.send('service_jdnvtid', 'template_29m8iud', serializedData, 'lFLTq3pU-IM9x461r')
 			.then((response) => {
 				console.log('Email sent successfully!', response);
 				window.location.href = '/success'; // Redirect to a success page
