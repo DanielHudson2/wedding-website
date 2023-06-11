@@ -1,0 +1,41 @@
+/**
+ * Calculate the rem value of a unit (eventually)
+ */
+ @function rem-calc($values, $base: 16) {
+    $rem-values: ();
+    $count: length($values);
+
+    @if $count == 1 {
+        @return -cn-to-rem($values);
+    }
+
+    @for $i from 1 through $count {
+        $rem-values: append($rem-values, -cn-to-rem(nth($values, $i)));
+    }
+
+    @return $rem-values;
+}
+
+@function -cn-to-rem($value) {
+    // Check if the value is a number
+        @if type-of($value) != 'number' {
+        @warn inspect($value) + ' was passed to rem-calc(), which is not a number.';
+        @return $value;
+    }
+
+    // Calculate rem if units for $value is not rem or em
+    @if unit($value) != 'rem' {
+        $value: calc(strip-unit($value) / 16 * 1rem);
+    }
+
+    // Turn 0rem into 0
+    @if $value == 0rem {
+        $value: 0;
+    }
+
+    @return $value;
+}
+
+@function strip-unit($num) {
+    @return calc($num / ($num * 0 + 1));
+}

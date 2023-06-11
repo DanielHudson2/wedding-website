@@ -1,0 +1,17 @@
+/**
+* HEADER
+**/
+
+header {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+    h1 {
+
+        a {
+            color: $c-primary;
+            text-decoration: none;
+        }
+    }
+}

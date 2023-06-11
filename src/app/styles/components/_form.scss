@@ -1,0 +1,28 @@
+/**
+* FORM
+**/
+
+form input[type="text"], form select {
+    margin-top: 5px;
+    padding: 5px;
+}
+form input[type="text"] {
+    width: 100%;
+}
+form select {
+    display: block;
+    min-width: 200px;
+}
+.form-section {
+    margin: 0 0 10px 0;
+}
+.form-row {
+    margin-bottom: 10px;
+}
+.form-row--50 {
+    display: flex;
+    gap: 20px;
+}
+.form-row--50 > * {
+    width: 50%;
+}

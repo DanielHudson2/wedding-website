@@ -15,20 +15,6 @@ interface Person {
 const RSVPPage = () => {
 	const [people, setPeople] = useState<Person[]>([
 		{
-		firstName: '',
-		lastName: '',
-		attending: false,
-		duration: '',
-		starter: '',
-		mainCourse: '',
-		dessert: '',
-		},
-	]);
-
-	const addPerson = () => {
-		setPeople([
-		...people,
-		{
 			firstName: '',
 			lastName: '',
 			attending: false,
@@ -37,6 +23,20 @@ const RSVPPage = () => {
 			mainCourse: '',
 			dessert: '',
 		},
+	]);
+
+	const addPerson = () => {
+		setPeople([
+			...people,
+			{
+				firstName: '',
+				lastName: '',
+				attending: false,
+				duration: '',
+				starter: '',
+				mainCourse: '',
+				dessert: '',
+			},
 		]);
 	};
 
@@ -96,7 +96,7 @@ const RSVPPage = () => {
 
 	return (
 		<main>
-			<h1>RSVP</h1>
+			<h2>RSVP</h2>
 			<form onSubmit={handleSubmit}
 				name="rsvp-form"
 				method="POST"
@@ -158,6 +158,7 @@ const RSVPPage = () => {
 										handleFieldChange(index, 'duration', e.target.value)
 									}
 								>
+									<option value="" disabled>Select duration</option>
 									<option value="Whole day">Whole day</option>
 									<option value="Ceremony/Breakfast">Ceremony/Breakfast</option>
 									<option value="Evening">Evening</option>
@@ -177,7 +178,8 @@ const RSVPPage = () => {
 										handleFieldChange(index, 'starter', e.target.value)
 									}
 								>
-									<option value="Starter A">Starter A</option>
+									<option value="" disabled>Select starter</option>
+									<option value="Starter A" selected>Starter A</option>
 									<option value="Starter B">Starter B</option>
 								</select>
 							</label>
@@ -195,7 +197,8 @@ const RSVPPage = () => {
 										handleFieldChange(index, 'mainCourse', e.target.value)
 									}
 								>
-									<option value="Main Course A">Main Course A</option>
+									<option value="" disabled>Select main course</option>
+									<option value="Main Course A" selected>Main Course A</option>
 									<option value="Main Course B">Main Course B</option>
 								</select>
 							</label>
@@ -213,7 +216,8 @@ const RSVPPage = () => {
 										handleFieldChange(index, 'dessert', e.target.value)
 									}
 								>
-									<option value="Dessert A">Dessert A</option>
+									<option value="" disabled>Select dessert</option>
+									<option value="Dessert A" selected>Dessert A</option>
 									<option value="Dessert B">Dessert B</option>
 								</select>
 							</label>
@@ -234,7 +238,6 @@ const RSVPPage = () => {
 						Add Another Person
 					</button>
 				</div>
-				<input type="hidden" name="formData" value={JSON.stringify(people)} />
 				<button type="submit">Submit</button>
 			</form>
 		</main>
