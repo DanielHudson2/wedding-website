@@ -20,7 +20,7 @@ const CountdownTimer = () => {
   }, []);
 
   const formatTime = (time: number) => {
-    return time < 10 ? `0${time}` : time;
+    return time < 10 ? `${time}` : time;
   };
 
   const days = Math.floor(countdown / (24 * 60 * 60));

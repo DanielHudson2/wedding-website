@@ -1,13 +1,25 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=Inter:wght@400;700&display=swap');
 
-h1 {
+h1, h2 {
     font-family: $f-headings;
 }
 
-h2, h3, h4, h5, h6 {
-    font-size: $f-body;
+h3, h4, h5, h6 {
+    font-family: $f-body;
 }
 
 h1 {
     font-size: rem-calc(64);
+}
+
+h2 {
+    font-size: rem-calc(44);
+}
+
+h3 {
+    font-size: rem-calc(34);
+}
+
+p {
+    margin-bottom: rem-calc(16);
 }

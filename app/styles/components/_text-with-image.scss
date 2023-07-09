@@ -1,0 +1,20 @@
+/**
+* TEXT-WITH-IMAGE
+**/
+
+.text-with-image {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    max-width: rem-calc(900);
+
+    &__content {
+        max-width: rem-calc(350);
+    }
+
+    img {
+        border-radius: rem-calc(277);
+        border: rem-calc(10) solid $c-white;
+        box-shadow:rem-calc(0 4 4 0) rgba($c-black, 0.25);
+    }
+}

@@ -9,9 +9,10 @@ body {
     color: $c-primary;
     font-family: $f-body;
     font-size: rem-calc(16);
-    padding-top: 250px;
+    padding-top: rem-calc(250);
 }
+
 main {
-    max-width: 1200px;
+    max-width: rem-calc(900);
     margin: 0 auto;
 }
