@@ -16,7 +16,7 @@ function OurStory() {
           <p>
             <strong>May 2012</strong>
           </p>
-          <p>When we met! <br />We met on Celine's first shift lifeguarding at GL1 in Gloucester.</p>
+          <p>When we met! <br />We met on Celine&apos;s first shift lifeguarding at GL1 in Gloucester.</p>
         </div>
       </div>
 
@@ -48,7 +48,7 @@ function OurStory() {
           </p>
           <p>
             Lockdown. <br />In our biggest test, we had to spend 3 months apart when Covid forced the country into lockdown.
-            At the time it was awful, but now when we look back, we have realized that it made us closer than we've ever
+            At the time it was awful, but now when we look back, we have realized that it made us closer than we&apos;ve ever
             been.
           </p>
         </div>

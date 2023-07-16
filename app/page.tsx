@@ -12,9 +12,9 @@ export default function Home() {
       <div className='text-with-image'>
 
         <div className='text-with-image__content fadeInLeft animate'>
-          <h2>We're getting married!</h2>
-          <p>Well it's about time, we just didn't want to rush into it, after all 10 years isn't that long really.</p>
-          <p>The big day is on Thursday 11th April 2024 at Eastington Park in Gloucestershire and we can't wait!</p>
+          <h2>We&apos;re getting married!</h2>
+          <p>Well it&apos;s about time, we just didn&apos;t want to rush into it, after all 10 years isn&apos;t that long really.</p>
+          <p>The big day is on Thursday 11th April 2024 at Eastington Park in Gloucestershire and we can&apos;t wait!</p>
         </div>
 
         <Image
