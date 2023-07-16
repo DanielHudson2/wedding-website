@@ -8,10 +8,15 @@
 @import 'reset';
 @import 'fonts';
 @import 'base'; 
+@import 'animations';
 
 // COMPONENTS
+@import './components/button';
 @import './components/header';
 @import './components/nav';
 @import './components/form';
+@import './components/row';
 @import './components/countdown-timer';
 @import './components/text-with-image';
+@import './components/footer';
+@import './components/our-story';

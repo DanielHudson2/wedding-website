@@ -5,9 +5,11 @@
 nav {
     font-size: rem-calc(20);
     padding: rem-calc(40 0);
+    width: 60%;
     
     ul {
         display: flex;
+        justify-content: center;
 
         li {
             margin: rem-calc(0 10);

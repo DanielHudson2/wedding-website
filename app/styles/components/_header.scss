@@ -3,15 +3,28 @@
 **/
 
 header {
-    display: flex;
-    flex-direction: column;
     align-items: center;
+    background: rgba($c-white, .8);
+    backdrop-filter: blur(5px);
+    display: flex;
+    padding: 0 $l-spacing--large;
+    position: sticky;
+    top: 0;
+    z-index: 2;
 
-    h1 {
+    > h1 {
+        margin-bottom: 0;
+        width: 20%;
 
         a {
             color: $c-primary;
             text-decoration: none;
         }
+    }
+
+    .header-button {
+        width: 20%;
+        display: flex;
+        justify-content: flex-end;
     }
 }

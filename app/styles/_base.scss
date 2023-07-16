@@ -1,15 +1,18 @@
 /**
 * BASE
 **/
+html {
+    scroll-behavior: smooth;
+}
 
 body {
-    background-image: url(../assets/header-bg.png);
+    //background-image: url(../assets/header-bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     color: $c-primary;
     font-family: $f-body;
     font-size: rem-calc(16);
-    padding-top: rem-calc(250);
+    //padding-top: rem-calc(250);
 }
 
 main {

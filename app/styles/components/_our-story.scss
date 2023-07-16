@@ -1,0 +1,51 @@
+/**
+* OUR-STORY
+**/
+
+.our-story {
+    padding: $l-spacing;
+    position: relative;
+
+    &::after {
+        content: '';
+        position: absolute;
+        width: rem-calc(2);
+        background-color: white;
+        top: 0;
+        bottom: 0;
+        left: 50%;
+        transform: translateX(-50%);
+    }
+
+    .container {
+        padding: $l-spacing;
+        position: relative;
+        background-color: inherit;
+        width: 50%;
+
+        &::after {
+            content: '';
+            position: absolute;
+            width: rem-calc(15);
+            height: rem-calc(15);
+            right: rem-calc(-7.5);
+            background-color: white;
+            top: rem-calc(22);
+            border-radius: 50%;
+            box-shadow: 0 0.125rem 1.25rem rgba(0,0,0,.2);
+            z-index: 1;
+        }
+
+        &.left {
+            left: 0;
+        }
+
+        &.right {
+            left: 50%;
+
+            &::after {
+                left: rem-calc(-7.5);
+            }
+        }
+    }
+}

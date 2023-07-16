@@ -1,0 +1,23 @@
+/**
+* FULL-ROW
+**/
+
+.row {
+    margin: $l-spacing--large 0;
+
+    &--full {
+        margin-left: calc(50% - 50vw);
+        margin-right: calc(50% - 50vw);
+        display: flex;
+        justify-content: center;
+    
+        &__content {
+            max-width: rem-calc(900);
+        }
+    }
+
+    &--secondary {
+        background-color: $c-secondary;
+        color: $c-white;
+    }
+}

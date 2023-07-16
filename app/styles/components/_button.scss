@@ -1,0 +1,11 @@
+/**
+* BUTTON
+**/
+
+.button {
+    background-color: $c-secondary;
+    padding: rem-calc(10 20);
+    color: $c-white;
+    border-radius: rem-calc(20);
+    text-decoration: none;
+}

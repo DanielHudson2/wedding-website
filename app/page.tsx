@@ -1,15 +1,19 @@
 'use client';
 import CountdownTimer from './components/CountdownTimer'
+import OurStory from './components/OurStory';
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <main>
+
+      <p>Thursday 11th April 2024 | Eastington Park, Gloucestershire</p>
+
       <CountdownTimer />
 
       <div className='text-with-image'>
 
-        <div className='text-with-image__content'>
+        <div className='text-with-image__content fadeInLeft animate'>
           <h2>We're getting married!</h2>
           <p>Well it's about time, we just didn't want to rush into it, after all 10 years isn't that long really.</p>
           <p>The big day is on Thursday 11th April 2024 at Eastington Park in Gloucestershire and we can't wait!</p>
@@ -20,8 +24,19 @@ export default function Home() {
           width='434'
           height='577'
           alt='Daniel and Celine'
+          className='fadeInRight animate'
         />
         
+      </div>
+
+      <div className='row row--full row--secondary'>
+
+        <div className='row--full__content'>
+
+          <OurStory />
+
+        </div>
+
       </div>
 
     </main>
