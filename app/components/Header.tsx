@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
     return (
         <header>
-            <h1><a href="/">D&C</a></h1>
+            <h1><a href="/">C&D</a></h1>
 
             <nav>
                 <ul>

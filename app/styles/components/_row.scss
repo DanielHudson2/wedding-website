@@ -13,6 +13,11 @@
     
         &__content {
             max-width: rem-calc(900);
+
+            > h2 {
+                text-align: center;
+                margin-top: $l-spacing--large;
+            }
         }
     }
 

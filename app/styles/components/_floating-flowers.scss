@@ -1,0 +1,25 @@
+/**
+* FLOATING-FLOWERS
+**/
+
+.flowers {
+
+    &-left, 
+    &-right {
+        position: absolute;
+        z-index: -1;
+    }
+
+    &-left {
+        width: 200px;
+        left: 15%;
+        top: rem-calc(20);
+        z-index: -1;
+    }
+
+    &-right {
+        width: 300px;
+        right: 10%;
+        bottom: -18%;
+    }
+}

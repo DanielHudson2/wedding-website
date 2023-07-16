@@ -1,0 +1,19 @@
+/**
+* HERO
+**/
+
+.hero {
+    padding: rem-calc(100 0);
+    position: relative;
+    text-align: center;
+    margin-left: calc(50% - 50vw);
+    margin-right: calc(50% - 50vw);
+
+    h1 {
+        font-size: rem-calc(150);
+    }
+
+    .countdown-timer {
+        margin-top: rem-calc(15);
+    }
+}

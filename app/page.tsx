@@ -1,15 +1,13 @@
 'use client';
-import CountdownTimer from './components/CountdownTimer'
 import OurStory from './components/OurStory';
+import Hero from './components/Hero';
 import Image from 'next/image'
 
 export default function Home() {
   return (
     <main>
 
-      <p>Thursday 11th April 2024 | Eastington Park, Gloucestershire</p>
-
-      <CountdownTimer />
+      <Hero />
 
       <div className='text-with-image'>
 
@@ -32,6 +30,8 @@ export default function Home() {
       <div className='row row--full row--secondary'>
 
         <div className='row--full__content'>
+
+          <h2>Our Story</h2>
 
           <OurStory />
 
