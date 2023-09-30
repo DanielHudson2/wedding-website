@@ -17,3 +17,8 @@ body {
     max-width: rem-calc(900);
     margin: 0 auto;
 }
+
+.hoz-padding {
+    padding-left: $l-spacing;
+    padding-right: $l-spacing;
+}
