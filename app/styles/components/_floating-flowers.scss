@@ -11,15 +11,26 @@
     }
 
     &-left {
-        width: 200px;
-        left: 15%;
+        width: rem-calc(110);
+        left: 1%;
         top: rem-calc(20);
         z-index: -1;
+
+        @media (min-width: $b-large) {
+            width: rem-calc(200);
+            left: 15%;
+        }
     }
 
     &-right {
-        width: 300px;
-        right: 10%;
-        bottom: -18%;
+        width: rem-calc(130);
+        right: -10%;
+        bottom: 35%;
+
+        @media (min-width: $b-large) {
+            width: rem-calc(300);
+            right: 10%;
+            bottom: -18%;
+        }
     }
 }

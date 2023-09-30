@@ -3,6 +3,7 @@
 **/
 html {
     scroll-behavior: smooth;
+    overflow-x: hidden;
 }
 
 body {
@@ -12,7 +13,7 @@ body {
     color: $c-primary;
     font-family: $f-body;
     font-size: rem-calc(16);
-    //padding-top: rem-calc(250);
+    overflow-x: hidden;
 }
 
 main {

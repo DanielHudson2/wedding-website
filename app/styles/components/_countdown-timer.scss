@@ -4,6 +4,10 @@
 
 .countdown-timer {
     font-family: $f-headings;
-    font-size: rem-calc(64);
+    font-size: rem-calc(28);
     text-align: center;
+
+    @media (min-width: $b-large) {
+        font-size: rem-calc(64);
+    }
 }

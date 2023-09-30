@@ -3,14 +3,22 @@
 **/
 
 .hero {
-    padding: rem-calc(100 0);
+    padding: rem-calc(50 0);
     position: relative;
     text-align: center;
     margin-left: calc(50% - 50vw);
     margin-right: calc(50% - 50vw);
 
+    @media (min-width: $b-large) {
+        padding: rem-calc(100 0);
+    }
+
     h1 {
-        font-size: rem-calc(150);
+        font-size: rem-calc(80);
+
+        @media (min-width: $b-large) {
+            font-size: rem-calc(150);
+        }
     }
 
     .countdown-timer {

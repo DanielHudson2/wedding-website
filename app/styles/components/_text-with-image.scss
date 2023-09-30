@@ -6,7 +6,12 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
+    flex-direction: column;
     max-width: rem-calc(900);
+
+    @media (min-width: $b-large) {
+        flex-direction: row;
+    }
 
     &__content {
         max-width: rem-calc(350);
