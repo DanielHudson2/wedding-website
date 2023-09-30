@@ -22,7 +22,7 @@ export default function OurVenue() {
           <div className='fadeInRight animate'>
             <h3>What Happens Next?</h3>
             <p>After the ceremony there will be a drinks reception with canapés as well as some photographs going on.</p>
-            <p>Then we'll be sitting down for the wedding breakfast and speeches before the party starts ending at midnight.</p>
+            <p>Then we&apos;ll be sitting down for the wedding breakfast and speeches before the party starts; ending at midnight.</p>
           </div>
 
         </div>
@@ -31,7 +31,7 @@ export default function OurVenue() {
 
           <div className='fadeInLeft animate'>
             <h3>What Should You Wear</h3>
-            <p>Go big or go home, but make sure you'll be able to last til midnight at the party.</p>
+            <p>Go big or go home, but make sure you&apos;ll be able to last til midnight at the party.</p>
           </div>
 
           <div className='fadeInRight animate'>

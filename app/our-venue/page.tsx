@@ -17,7 +17,7 @@ export default function OurVenue() {
             <h2>Eastington Park</h2>
             <p>Our venue is a beautiful manor house in Eastington (just outside of Stonehouse).</p>
             <p>After struggling to find our perfect venue Eastington Park was the last one we viewed and we fell in love with it immediately.</p>
-            <p>It was important that the venue felt 'us' and it's not something we felt at any other venue until we walked into Eastington.</p>
+            <p>It was important that the venue felt &apos;us&apos; and it&apos;s not something we felt at any other venue until we walked into Eastington.</p>
           </div>
 
           <Image
@@ -38,7 +38,7 @@ export default function OurVenue() {
             <li>You are able to drive all the way to the front door for dropoffs but we ask that everyone uses the provided carpark which is signposted on the driveway.</li>
           </ul>
           <br></br>
-          <p>You can find out anything else you need by visting Eastington Park's website <a href="https://www.eastingtonpark.co.uk/" target='_blank' rel="noopener noreferrer">www.eastingtonpark.co.uk</a></p>
+          <p>You can find out anything else you need by visting Eastington Park&apos;s website <a href="https://www.eastingtonpark.co.uk/" target='_blank' rel="noopener noreferrer">www.eastingtonpark.co.uk</a></p>
           <br></br>
         </div>
 
