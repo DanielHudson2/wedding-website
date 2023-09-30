@@ -19,6 +19,8 @@ nav {
         display: flex;
         justify-content: center;
         flex-wrap: wrap;
+        list-style: none;
+        margin-bottom: 0;
 
         li {
             margin: rem-calc(5 10);

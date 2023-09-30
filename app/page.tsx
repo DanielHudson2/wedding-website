@@ -9,7 +9,7 @@ export default function Home() {
 
       <Hero />
 
-      <div className='text-with-image width-container'>
+      <div className='text-with-image width-container fancy-border'>
 
         <div className='text-with-image__content fadeInLeft animate'>
           <h2>We&apos;re getting married!</h2>
@@ -29,7 +29,7 @@ export default function Home() {
 
       <div className='row row--secondary'>
 
-        <div className='row__content'>
+        <div className='row__content width-container'>
 
           <h2>Our Story</h2>
 

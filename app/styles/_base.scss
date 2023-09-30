@@ -22,3 +22,8 @@ body {
     padding-left: $l-spacing;
     padding-right: $l-spacing;
 }
+
+ul {
+    list-style-type: disc;
+    margin-bottom: rem-calc(16);
+}

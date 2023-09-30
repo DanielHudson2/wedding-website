@@ -9,7 +9,7 @@ function Header() {
                 <ul>
                     <li><a href="/#ourStory">Our Story</a></li>
                     <li><a href="/the-big-day">The Big Day</a></li>
-                    <li><a href="/venue">Venue</a></li>
+                    <li><a href="/our-venue">Our Venue</a></li>
                     <li><a href="/accomodation">Accomodation</a></li>
                 </ul>
             </nav>

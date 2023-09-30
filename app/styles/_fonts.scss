@@ -1,29 +1,50 @@
 @import url('https://fonts.googleapis.com/css2?family=Alex+Brush&family=PT+Serif:wght@400;700&display=swap');
 
-h1, h2 {
+h1, h2, h3 {
     font-family: $f-headings;
 }
 
-h3, h4, h5, h6 {
+h4, h5, h6 {
     font-family: $f-body;
 }
 
 h1 {
-    font-size: rem-calc(64);
+    font-size: rem-calc(40);
+    margin-top: rem-calc(10);
+
+    @media (min-width: $b-large) {
+        font-size: rem-calc(64);
+    }
 }
 
 h2 {
-    font-size: rem-calc(44);
+    font-size: rem-calc(35);
+
+    @media (min-width: $b-large) {
+        font-size: rem-calc(44);
+    }
 }
 
 h3 {
-    font-size: rem-calc(34);
+    font-size: rem-calc(25);
+
+    @media (min-width: $b-large) {
+        font-size: rem-calc(34);
+    }
 }
 
-h1, h2 {
+h1, h2, h3 {
     margin-bottom: rem-calc(16);
 }
 
 .body-font {
     font-family: $f-body;
+}
+
+p {
+    margin-bottom: rem-calc(10);
+}
+
+a {
+    color: $c-primary;
 }

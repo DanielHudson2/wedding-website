@@ -18,9 +18,22 @@
     }
 
     img {
-        border-radius: rem-calc(277);
-        border: rem-calc(10) solid $c-white;
-        box-shadow:rem-calc(0 4 4 0) rgba($c-black, 0.25);
-        max-width: 60%;
+        margin: $l-spacing--large 0;
+        border-radius: rem-calc(10);
+
+        @media (min-width: $b-large) {
+            margin-left: $l-spacing;
+            max-width: 60%;
+        }
+    }
+
+    &.fancy-border {
+
+        img {
+            max-width: 60%;
+            border-radius: rem-calc(277);
+            border: rem-calc(10) solid $c-white;
+            box-shadow:rem-calc(0 4 4 0) rgba($c-black, 0.25);
+        }
     }
 }
