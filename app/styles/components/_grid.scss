@@ -10,4 +10,8 @@
     @media (min-width: $b-large) {
         grid-template-columns: repeat(2, 1fr);
     }
+
+    > * {
+        padding: rem-calc(10 0);
+    }
 }
