@@ -1,0 +1,13 @@
+/**
+* GRID
+**/
+
+.grid {
+    display: grid;
+    grid-template-columns: repeat(1, 1fr);
+    gap: $l-spacing;
+
+    @media (min-width: $b-large) {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
