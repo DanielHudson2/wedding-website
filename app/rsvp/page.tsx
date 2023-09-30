@@ -97,7 +97,11 @@ const RSVPPage = () => {
 	return (
 		<main>
 			<div className="width-container">
-				<h1 className='body-font hoz-padding'>RSVP</h1>
+				<div className="hoz-padding">
+					<h1 className='body-font'>RSVP</h1>
+					<p>Use the form below to let us know if you and anyone else you need to RSVP for are able to attend our wedding.</p>
+					<br></br>
+				</div>
 				<form onSubmit={handleSubmit}
 					name="rsvp-form"
 					method="POST"
@@ -110,7 +114,7 @@ const RSVPPage = () => {
 						<h3>{person.firstName} {person.lastName}</h3>
 						<div className="form-row form-row--50">
 							<label>
-								First Name:
+								<p>First Name:</p>
 								<input
 									type="text"
 									name={`firstName${index}`}
@@ -122,7 +126,7 @@ const RSVPPage = () => {
 								/>
 							</label>
 							<label>
-								Last Name:
+								<p>Last Name:</p>
 								<input
 									type="text"
 									name={`lastName${index}`}
@@ -135,8 +139,8 @@ const RSVPPage = () => {
 							</label>
 						</div>
 						<div className="form-row">
-							<label>
-								Will you be attending our wedding?:
+							<label className="field-flex">
+								<p>Will you be attending our wedding?:</p>
 								<input
 									type="checkbox"
 									checked={person.attending}
@@ -150,7 +154,7 @@ const RSVPPage = () => {
 						{person.attending && (
 							<div className="form-row">
 								<label>
-									Will you attending the whole day, the ceremony/breakfast or just the evening?:
+									<p>Will you attending the whole day, the ceremony/breakfast or just the evening?:</p>
 									<select
 										value={person.duration}
 										required
@@ -170,7 +174,7 @@ const RSVPPage = () => {
 						{person.attending && person.duration !== 'Evening' && (
 							<div className="form-row">
 								<label>
-									Please select the starter you would like:
+									<p>Please select the starter you would like:</p>
 									<select
 										value={person.starter}
 										required
@@ -189,7 +193,7 @@ const RSVPPage = () => {
 						{person.attending && person.duration !== 'Evening' && (
 							<div className="form-row">
 								<label>
-									Please select the main you would like:
+									<p>Please select the main you would like:</p>
 									<select
 										value={person.mainCourse}
 										required
@@ -208,7 +212,7 @@ const RSVPPage = () => {
 						{person.attending && person.duration !== 'Evening' && (
 							<div className="form-row">
 								<label>
-									Please select the dessert you would like:
+									<p>Please select the dessert you would like:</p>
 									<select
 										value={person.dessert}
 										required
@@ -226,7 +230,7 @@ const RSVPPage = () => {
 						)}
 						{index > 0 && (
 							<div className="form-row">
-								<button type="button" onClick={() => removePerson(index)}>
+								<button className='button--primary' type="button" onClick={() => removePerson(index)}>
 									Remove Person
 								</button>
 							</div>
@@ -235,11 +239,11 @@ const RSVPPage = () => {
 					))}
 					<div className="form-row">
 						<p>Do you need to RSVP for anyone else?</p>
-						<button type="button" onClick={addPerson}>
+						<button className="button--primary" type="button" onClick={addPerson}>
 							Add Another Person
 						</button>
 					</div>
-					<button type="submit">Submit</button>
+					<button className='button--secondary' type="submit">Submit</button>
 				</form>
 			</div>
 		</main>

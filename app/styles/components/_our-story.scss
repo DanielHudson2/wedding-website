@@ -5,7 +5,7 @@
 .our-story {
     padding: $l-spacing;
     position: relative;
-    scroll-margin-top: 200px;
+    scroll-margin-top: rem-calc(200);
 
     &::after {
         content: '';

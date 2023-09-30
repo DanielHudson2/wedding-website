@@ -16,7 +16,7 @@ function Header() {
 
             <div className="header-button">
 
-                <a href="/rsvp" className="button">RSVP</a>
+                <a href="/rsvp" className="button button--secondary">RSVP</a>
 
             </div>
             

@@ -3,18 +3,31 @@
 **/
 
 .button, button {
-    background-color: $c-secondary;
     padding: rem-calc(10 20);
     color: $c-white;
     border-radius: rem-calc(20);
     text-decoration: none;
     transition: .3s ease-out;
     cursor: pointer;
-    border: none;
+    border: rem-calc(1) solid;
     font-size: rem-calc(16);
     font-family: $f-body;
 
-    &:hover {
-        background-color: $c-secondary--dark;
+    &.button--primary {
+        color: $c-primary;
+        border-color: $c-primary;
+
+        &:hover {
+            background-color: $c-primary;
+            color: $c-white;
+        }
+    }
+
+    &.button--secondary {
+        background-color: $c-secondary;
+
+        &:hover {
+            background-color: $c-secondary--dark;
+        }
     }
 }
