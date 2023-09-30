@@ -9,7 +9,7 @@ export default function Home() {
 
       <Hero />
 
-      <div className='text-with-image'>
+      <div className='text-with-image width-container'>
 
         <div className='text-with-image__content fadeInLeft animate'>
           <h2>We&apos;re getting married!</h2>
@@ -27,9 +27,9 @@ export default function Home() {
         
       </div>
 
-      <div className='row row--full row--secondary'>
+      <div className='row row--secondary'>
 
-        <div className='row--full__content'>
+        <div className='row__content'>
 
           <h2>Our Story</h2>
 

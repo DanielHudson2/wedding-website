@@ -7,7 +7,7 @@
     align-items: center;
     justify-content: space-between;
     flex-direction: column;
-    max-width: rem-calc(900);
+    padding: 0 $l-spacing;
 
     @media (min-width: $b-large) {
         flex-direction: row;
@@ -21,5 +21,6 @@
         border-radius: rem-calc(277);
         border: rem-calc(10) solid $c-white;
         box-shadow:rem-calc(0 4 4 0) rgba($c-black, 0.25);
+        max-width: 60%;
     }
 }

@@ -3,20 +3,17 @@
 **/
 html {
     scroll-behavior: smooth;
-    overflow-x: hidden;
 }
 
 body {
-    //background-image: url(../assets/header-bg.png);
     background-repeat: no-repeat;
     background-size: 100%;
     color: $c-primary;
     font-family: $f-body;
     font-size: rem-calc(16);
-    overflow-x: hidden;
 }
 
-main {
+.width-container {
     max-width: rem-calc(900);
     margin: 0 auto;
 }

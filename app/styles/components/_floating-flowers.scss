@@ -8,6 +8,11 @@
     &-right {
         position: absolute;
         z-index: -1;
+        opacity: 0.5;
+
+        @media (min-width: $b-large) {
+            opacity: 1;
+        }
     }
 
     &-left {

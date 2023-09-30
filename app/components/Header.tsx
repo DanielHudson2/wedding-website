@@ -3,7 +3,7 @@ import React from 'react';
 function Header() {
     return (
         <header>
-            <h1><a href="/">C&D</a></h1>
+            <span className="logo"><a href="/">C&D</a></span>
 
             <nav>
                 <ul>

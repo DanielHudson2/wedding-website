@@ -3,14 +3,14 @@
 **/
 
 .hero {
-    padding: rem-calc(50 0);
+    padding: rem-calc(50) $l-spacing;
     position: relative;
     text-align: center;
-    margin-left: calc(50% - 50vw);
-    margin-right: calc(50% - 50vw);
+    overflow: hidden;
 
     @media (min-width: $b-large) {
         padding: rem-calc(100 0);
+        overflow: visible;
     }
 
     h1 {

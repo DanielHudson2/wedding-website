@@ -3,13 +3,22 @@
 **/
 
 nav {
-    font-size: rem-calc(20);
-    padding: rem-calc(40 0);
-    width: 60%;
+    font-size: rem-calc(16);
+    width: 100%;
+    order: 3;
+    margin-top: $l-spacing;
+
+    @media (min-width: $b-large) {
+        width: 60%;
+        order: unset;
+        font-size: rem-calc(20);
+        margin-top: 0;
+    }
     
     ul {
         display: flex;
         justify-content: center;
+        flex-wrap: wrap;
 
         li {
             margin: rem-calc(0 10);
