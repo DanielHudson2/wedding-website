@@ -9,40 +9,20 @@ h4, h5, h6 {
 }
 
 h1 {
-    font-size: rem-calc(40);
+    font-size: clamp(2.5rem, 1.9783rem + 2.6087vw, 4rem);
     margin-top: rem-calc(10);
-
-    @media (min-width: $b-large) {
-        font-size: rem-calc(64);
-    }
 }
 
 h2 {
-    font-size: rem-calc(35);
-
-    @media (min-width: $b-large) {
-        font-size: rem-calc(44);
-    }
+    font-size: clamp(2.1875rem, 1.9918rem + 0.9783vw, 2.75rem);
 }
 
 h3 {
-    font-size: rem-calc(25);
-
-    @media (min-width: $b-large) {
-        font-size: rem-calc(34);
-    }
-}
-
-h1, h2, h3 {
-    margin-bottom: rem-calc(12);
+    font-size: clamp(1.5625rem, 1.3668rem + 0.9783vw, 2.125rem);
 }
 
 .body-font {
     font-family: $f-body;
-}
-
-p {
-    margin-bottom: rem-calc(10);
 }
 
 a {

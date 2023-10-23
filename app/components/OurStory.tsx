@@ -12,7 +12,7 @@ function OurStory() {
   return (
     <div className="our-story" id='ourStory'>
       <div className={`container left fadeInLeft ${inView1 ? 'animate' : ''}`} ref={ref1}>
-        <div className="content">
+        <div className="content flow">
           <p>
             <strong>May 2012</strong>
           </p>
@@ -21,7 +21,7 @@ function OurStory() {
       </div>
 
       <div className={`container right fadeInRight ${inView2 ? 'animate' : ''}`} ref={ref2}>
-        <div className="content">
+        <div className="content flow">
           <p>
             <strong>12 April 2013</strong>
           </p>
@@ -30,7 +30,7 @@ function OurStory() {
       </div>
 
       <div className={`container left fadeInLeft ${inView3 ? 'animate' : ''}`} ref={ref3}>
-        <div className="content">
+        <div className="content flow">
           <p>
             <strong>September 2014</strong>
           </p>
@@ -42,7 +42,7 @@ function OurStory() {
       </div>
 
       <div className={`container right fadeInRight ${inView4 ? 'animate' : ''}`} ref={ref4}>
-        <div className="content">
+        <div className="content flow">
           <p>
             <strong>March 2020</strong>
           </p>
@@ -55,7 +55,7 @@ function OurStory() {
       </div>
 
       <div className={`container left fadeInLeft ${inView5 ? 'animate' : ''}`} ref={ref5}>
-        <div className="content">
+        <div className="content flow">
           <p>
             <strong>22 August 2021</strong>
           </p>
@@ -67,7 +67,7 @@ function OurStory() {
       </div>
 
       <div className={`container right fadeInRight ${inView6 ? 'animate' : ''}`} ref={ref6}>
-        <div className="content">
+        <div className="content flow">
           <p>
             <strong>11 March 2022</strong>
           </p>

@@ -7,9 +7,7 @@ interface Person {
 	lastName: string;
 	attending: boolean;
 	duration: string;
-	starter: string;
-	mainCourse: string;
-	dessert: string;
+	dietryRequirements: string;
 }
 
 const RSVPPage = () => {
@@ -19,9 +17,7 @@ const RSVPPage = () => {
 			lastName: '',
 			attending: false,
 			duration: '',
-			starter: '',
-			mainCourse: '',
-			dessert: '',
+			dietryRequirements: '',
 		},
 	]);
 
@@ -33,9 +29,7 @@ const RSVPPage = () => {
 				lastName: '',
 				attending: false,
 				duration: '',
-				starter: '',
-				mainCourse: '',
-				dessert: '',
+				dietryRequirements: '',
 			},
 		]);
 	};
@@ -67,9 +61,7 @@ const RSVPPage = () => {
 			Last Name: ${person.lastName}
 			Attending: ${person.attending ? 'Yes' : 'No'}
 			Duration: ${person.duration}
-			Starter: ${person.starter}
-			Main Course: ${person.mainCourse}
-			Dessert: ${person.dessert}
+			Dietry Requirements: ${person.dietryRequirements}
 		`;
 		});
 
@@ -96,21 +88,20 @@ const RSVPPage = () => {
 
 	return (
 		<main>
-			<div className="width-container">
-				<div className="hoz-padding">
+			<div className="width-container flow">
+				<div className="hoz-padding flow">
 					<h1 className='body-font'>RSVP</h1>
 					<p>Use the form below to let us know if you and anyone else you need to RSVP for are able to attend our wedding.</p>
-					<br></br>
 				</div>
 				<form onSubmit={handleSubmit}
 					name="rsvp-form"
 					method="POST"
 					data-netlify="true"
-					className='rsvp-form'
+					className='rsvp-form flow'
 				>
 					<input type="hidden" name="form-name" value="rsvp-form" />
 					{people.map((person, index) => (
-					<div className="form-section" key={index}>
+					<div className="form-section flow" key={index}>
 						<h3>{person.firstName} {person.lastName}</h3>
 						<div className="form-row form-row--50">
 							<label>
@@ -174,57 +165,15 @@ const RSVPPage = () => {
 						{person.attending && person.duration !== 'Evening' && (
 							<div className="form-row">
 								<label>
-									<p>Please select the starter you would like:</p>
-									<select
-										value={person.starter}
-										required
-										name={`starter${index}`}
-										onChange={(e) =>
-											handleFieldChange(index, 'starter', e.target.value)
-										}
+									<p>Do you have any dietry requirements:</p>
+									<textarea 
+									name={`dietryRequirements${index}`} 
+									value={person.dietryRequirements}
+									onChange={(e) =>
+									handleFieldChange(index, 'dietryRequirements', e.target.value)
+									}
 									>
-										<option value="" disabled>Select starter</option>
-										<option value="Starter A" selected>Starter A</option>
-										<option value="Starter B">Starter B</option>
-									</select>
-								</label>
-							</div>
-						)}
-						{person.attending && person.duration !== 'Evening' && (
-							<div className="form-row">
-								<label>
-									<p>Please select the main you would like:</p>
-									<select
-										value={person.mainCourse}
-										required
-										name={`mainCourse${index}`}
-										onChange={(e) =>
-											handleFieldChange(index, 'mainCourse', e.target.value)
-										}
-									>
-										<option value="" disabled>Select main course</option>
-										<option value="Main Course A" selected>Main Course A</option>
-										<option value="Main Course B">Main Course B</option>
-									</select>
-								</label>
-							</div>
-						)}
-						{person.attending && person.duration !== 'Evening' && (
-							<div className="form-row">
-								<label>
-									<p>Please select the dessert you would like:</p>
-									<select
-										value={person.dessert}
-										required
-										name={`dessert${index}`}
-										onChange={(e) =>
-											handleFieldChange(index, 'dessert', e.target.value)
-										}
-									>
-										<option value="" disabled>Select dessert</option>
-										<option value="Dessert A" selected>Dessert A</option>
-										<option value="Dessert B">Dessert B</option>
-									</select>
+									</textarea>
 								</label>
 							</div>
 						)}

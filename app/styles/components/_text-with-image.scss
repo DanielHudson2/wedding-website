@@ -14,7 +14,9 @@
     }
 
     &__content {
-        max-width: rem-calc(350);
+        @media (min-width: $b-large) {
+            max-width: rem-calc(350);
+        }
     }
 
     img {
