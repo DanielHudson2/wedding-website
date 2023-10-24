@@ -97,7 +97,7 @@ const RSVPPage = () => {
 					name="rsvp-form"
 					method="POST"
 					data-netlify="true"
-					className='rsvp-form flow'
+					className='rsvp-form flow pure-form'
 				>
 					<input type="hidden" name="form-name" value="rsvp-form" />
 					{people.map((person, index) => (

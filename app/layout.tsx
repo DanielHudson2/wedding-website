@@ -1,4 +1,5 @@
 import './styles/main.scss'
+import 'purecss/build/forms.css'
 import Header from './components/Header'
 import Footer from './components/Footer'
 export const metadata = {
