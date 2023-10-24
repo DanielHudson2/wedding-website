@@ -5,7 +5,7 @@ import emailjs from '@emailjs/browser';
 interface Person {
 	firstName: string;
 	lastName: string;
-	attending: boolean;
+	attending: string;
 	duration: string;
 	dietryRequirements: string;
 }
@@ -15,7 +15,7 @@ const RSVPPage = () => {
 		{
 			firstName: '',
 			lastName: '',
-			attending: false,
+			attending: 'Yes',
 			duration: '',
 			dietryRequirements: '',
 		},
@@ -27,7 +27,7 @@ const RSVPPage = () => {
 			{
 				firstName: '',
 				lastName: '',
-				attending: false,
+				attending: 'Yes',
 				duration: '',
 				dietryRequirements: '',
 			},
@@ -59,7 +59,7 @@ const RSVPPage = () => {
 		const formattedData = people.map((person) => {
 			return `First Name: ${person.firstName}
 			Last Name: ${person.lastName}
-			Attending: ${person.attending ? 'Yes' : 'No'}
+			Attending: ${person.attending}
 			Duration: ${person.duration}
 			Dietry Requirements: ${person.dietryRequirements}
 		`;
@@ -130,19 +130,22 @@ const RSVPPage = () => {
 							</label>
 						</div>
 						<div className="form-row">
-							<label className="field-flex">
+							<label>
 								<p>Will you be attending our wedding?:</p>
-								<input
-									type="checkbox"
-									checked={person.attending}
+								<select
+									value={person.attending}
+									required
 									name={`attending${index}`}
 									onChange={(e) =>
-									handleFieldChange(index, 'attending', e.target.checked)
+										handleFieldChange(index, 'attending', e.target.value)
 									}
-								/>
+								>
+									<option value="Yes">I am able to attend your wedding</option>
+									<option value="No">I am unable to attend your wedding</option>
+								</select>
 							</label>
 						</div>
-						{person.attending && (
+						{person.attending === 'Yes' && (
 							<div className="form-row">
 								<label>
 									<p>Will you attending the whole day, the ceremony/breakfast or just the evening?:</p>
@@ -162,10 +165,10 @@ const RSVPPage = () => {
 								</label>
 							</div>
 						)}
-						{person.attending && person.duration !== 'Evening' && (
+						{person.attending === 'Yes' && person.duration !== 'Evening' && (
 							<div className="form-row">
 								<label>
-									<p>Do you have any dietry requirements:</p>
+									<p>Do you have any dietry requirements: (The food can be found on your invitation or <a href="/the-big-day" target='_blank'>here</a>)</p>
 									<textarea 
 									name={`dietryRequirements${index}`} 
 									value={person.dietryRequirements}
