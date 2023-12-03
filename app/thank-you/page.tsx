@@ -14,9 +14,9 @@ export default function ThankYou() {
         <div className='text-with-image'>
 
           <div className='text-with-image__content fadeInLeft animate flow'>
-            <p>If you can't make it then we are sorry you won't be able to join us.</p>
-            <p>If you can then we can't wait to see you there, we are so excited and can't wait to share the day with everyone.</p>
-            <p>If you've got any questions then feel free to send us an email <a href="mailto:celineanddaniel@gmail.com">by clicking here.</a></p>
+            <p>If you can&apos;t make it then we are sorry you won&apos;t be able to join us.</p>
+            <p>If you can then we can&apos;t wait to see you there, we are so excited and can&apos;t wait to share the day with everyone.</p>
+            <p>If you&apos;ve got any questions then feel free to send us an email <a href="mailto:celineanddaniel@gmail.com">by clicking here.</a></p>
           </div>
 
           <Image
