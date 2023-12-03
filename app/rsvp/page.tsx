@@ -77,7 +77,7 @@ const RSVPPage = () => {
 			'lFLTq3pU-IM9x461r')
 			.then((response) => {
 				console.log('Email sent successfully!', response);
-				window.location.href = '/success'; // Redirect to a success page
+				window.location.href = '/thank-you'; // Redirect to a success page
 			})
 			.catch((error) => {
 				console.error('Email sending failed:', error);
