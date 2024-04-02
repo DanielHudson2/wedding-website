@@ -5,6 +5,7 @@ const CountdownTimer = () => {
 
   useEffect(() => {
     const targetDate: Date = new Date('2024-04-11'); // Set your target date here
+    targetDate.setHours(14, 0, 0, 0);
     const currentTime: Date = new Date();
 
     const difference: number = targetDate.getTime() - currentTime.getTime();
